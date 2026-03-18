@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Xác nhận thông tin</title>
+</head>
+<body>
+<h2>Xác nhận thông tin sinh viên</h2>
+
+<ul>
+    <li><strong>ID:</strong> <span th:text="${student.id}"></span></li>
+    <li><strong>Name:</strong> <span th:text="${student.name}"></span></li>
+    <li><strong>Date of Birth:</strong> <span th:text="${student.dob}"></span></li>
+    <li><strong>Department:</strong> <span th:text="${student.department}"></span></li>
+</ul>
+
+<form method="post">
+    <button type="submit" th:formaction="@{/confirm}">Confirm</button>
+    <button type="submit" th:formaction="@{/back}">Back</button>
+</form>
+</body>
+</html>
